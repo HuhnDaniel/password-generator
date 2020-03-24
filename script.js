@@ -10,5 +10,9 @@ function writePassword() {
 
 }
 
+function generatePassword() {
+	// Initialize variables for all inputs
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
