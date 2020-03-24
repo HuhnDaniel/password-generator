@@ -12,6 +12,22 @@ function writePassword() {
 
 function generatePassword() {
 	// Initialize variables for all inputs
+	var pwLength = inputLength();
+	console.log(pwLength);
+}
+
+function inputLength() {
+	// Ask for password length
+	var length = parseInt(prompt("How many characters would you like in your password?\n Please enter a value between 8 and 128."));
+	
+	// Check to see if input is valid, if not ask again
+	while(length < 8 || length > 128) {
+		alert("Length must be between 8 and 128.");
+		var length = parseInt(prompt("How many characters would you like in your password?\n Please enter a value between 8 and 128."));
+	}
+	console.log(length);
+	// Send value back to generatePassword()
+	return length;
 }
 
 // Add event listener to generate button
