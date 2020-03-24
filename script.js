@@ -13,8 +13,8 @@ function writePassword() {
 function generatePassword() {
 	// Initialize variables for all inputs
 	var pwLength = inputLength();
-	var lowercase = characterTypes();
-
+	var characters = characterTypes();
+	console.log(characters);
 }
 
 function inputLength() {
@@ -38,7 +38,18 @@ function characterTypes() {
 	types.push(confirm("Do you want to include uppercase letters?"));
 	types.push(confirm("Do you want to include numbers?"));
 	types.push(confirm("Do you want to include special characters?"));
+	
+	// Check to see if input is valid, if not ask again
+	while(!types.includes(true)) {
+		alert("Must include at least one type of character.");
+		types.push(confirm("Do you want to include lowercase letters?"));
+		types.push(confirm("Do you want to include uppercase letters?"));
+		types.push(confirm("Do you want to include numbers?"));
+		types.push(confirm("Do you want to include special characters?"));
+	}
 	console.log(types);
+	//send value back to generatePassword
+	return types;
 }
 
 // Add event listener to generate button
