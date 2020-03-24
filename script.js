@@ -13,7 +13,8 @@ function writePassword() {
 function generatePassword() {
 	// Initialize variables for all inputs
 	var pwLength = inputLength();
-	console.log(pwLength);
+	var lowercase = characterTypes();
+
 }
 
 function inputLength() {
@@ -25,9 +26,19 @@ function inputLength() {
 		alert("Length must be between 8 and 128.");
 		var length = parseInt(prompt("How many characters would you like in your password?\n Please enter a value between 8 and 128."));
 	}
-	console.log(length);
+	
 	// Send value back to generatePassword()
 	return length;
+}
+
+function characterTypes() {
+	// Ask for lowercase, uppercase, numerals, and special characters
+	var types = [];
+	types.push(confirm("Do you want to include lowercase letters?"));
+	types.push(confirm("Do you want to include uppercase letters?"));
+	types.push(confirm("Do you want to include numbers?"));
+	types.push(confirm("Do you want to include special characters?"));
+	console.log(types);
 }
 
 // Add event listener to generate button
