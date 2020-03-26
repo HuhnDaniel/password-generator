@@ -13,14 +13,64 @@ function writePassword() {
 function generatePassword() {
 	// Initialize variables for all inputs
 	var pwLength = inputLength();
-	var characterTypesChosen = characterTypes();
+	var charTypesChosen = characterTypes();
+	// Initialize empty string to start password on
 	var pwTentative = "";
-	var asciiChooser;
+	// array to check desired character type requests against
+	var checkArray = ["true,true,true,true", "true,true,true,false", "true,true,false,true", "true,true,false,false", "true,false,true,true", "true,false,true,false", "true,false,false,true", "true,false,false,false", "false,true,true,true", "false,true,true,false", "false,true,false,true", "false,true,false,false", "false,false,true,true", "false,false,true,false", "false,false,false,true", "false,false,false,false"];
 
 	// Go through a loop to add a character for the length of the password
 	for(var i = 0; i < pwLength; i++) {
-		asciiChooser = Math.floor(Math.random() * 94) + 33;
-		pwTentative = pwTentative + String.fromCharCode(asciiChooser);
+		switch(checkArray.indexOf(charTypesChosen.toString())) {
+			case 0:
+				return 0;
+			break;
+			case 1:
+				return 1;
+			break;
+			case 2:
+				return 2;
+			break;
+			case 3:
+				return 3;
+			break;
+			case 4:
+				return 4;
+			break;
+			case 5:
+				return 5;
+			break;
+			case 6:
+				return 6;
+			break;
+			case 7:
+				return 7;
+			break;
+			case 8:
+				return 8;
+			break;
+			case 9:
+				return 9;
+			break;
+			case 10:
+				return 10;
+			break;
+			case 11:
+				return 11;
+			break;
+			case 12:
+				return 12;
+			break;
+			case 13:
+				return 13;
+			break;
+			case 14:
+				return 14;
+			break;
+			case 15:
+				return 15;
+			break;
+		}
 	}
 
 	return pwTentative;
