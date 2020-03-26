@@ -23,7 +23,8 @@ function generatePassword() {
 	for(var i = 0; i < pwLength; i++) {
 		switch(checkArray.indexOf(charTypesChosen.toString())) {
 			case 0:
-				return 0;
+				var asciiChooser = Math.floor(Math.random() * 94) + 33;
+				pwTentative = pwTentative + String.fromCharCode(asciiChooser);
 			break;
 			case 1:
 				return 1;
