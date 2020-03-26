@@ -15,10 +15,12 @@ function generatePassword() {
 	var pwLength = inputLength();
 	var characterTypesChosen = characterTypes();
 	var pwTentative = "";
+	var asciiChooser;
 
 	// Go through a loop to add a character for the length of the password
 	for(var i = 0; i < pwLength; i++) {
-		pwTentative = pwTentative + "a";
+		asciiChooser = Math.floor(Math.random() * 94) + 33;
+		pwTentative = pwTentative + String.fromCharCode(asciiChooser);
 	}
 
 	return pwTentative;
