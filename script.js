@@ -13,8 +13,15 @@ function writePassword() {
 function generatePassword() {
 	// Initialize variables for all inputs
 	var pwLength = inputLength();
-	var characters = characterTypes();
-	console.log(characters);
+	var characterTypesChosen = characterTypes();
+	var pwTentative = "";
+
+	// Go through a loop to add a character for the length of the password
+	for(var i = 0; i < pwLength; i++) {
+		pwTentative = pwTentative + "a";
+	}
+
+	return pwTentative;
 }
 
 function inputLength() {
@@ -47,7 +54,7 @@ function characterTypes() {
 		types.push(confirm("Do you want to include numbers?"));
 		types.push(confirm("Do you want to include special characters?"));
 	}
-	console.log(types);
+
 	//send value back to generatePassword
 	return types;
 }
