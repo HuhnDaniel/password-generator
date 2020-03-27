@@ -123,8 +123,8 @@ function inputLength() {
 	var length = parseInt(prompt("How many characters would you like in your password?\n Please enter a value between 8 and 128."));
 	
 	// Check to see if input is valid, if not ask again
-	while(length < 8 || length > 128) {
-		alert("Length must be between 8 and 128.");
+	while(length < 8 || length > 128 || isNaN(length)) {
+		alert("Length must be an integer between 8 and 128.");
 		var length = parseInt(prompt("How many characters would you like in your password?\n Please enter a value between 8 and 128."));
 	}
 	
