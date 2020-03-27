@@ -43,8 +43,11 @@ function generatePassword() {
 				pwTentative = pwTentative + pool[characterChooser];
 			}
 			break;
-		case 3:
-			return 3;
+		case 3:for(var i = 0; i < pwLength; i++) {
+			var pool = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+			var characterChooser = Math.floor(Math.random() * pool.length);
+			pwTentative = pwTentative + pool[characterChooser];
+		}
 			break;
 		case 4:
 			for(var i = 0; i < pwLength; i++) {
@@ -53,11 +56,18 @@ function generatePassword() {
 				pwTentative = pwTentative + pool[characterChooser];
 			}
 			break;
-		case 5:
-			return 5;
+		case 5:for(var i = 0; i < pwLength; i++) {
+			var pool = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+			var characterChooser = Math.floor(Math.random() * pool.length);
+			pwTentative = pwTentative + pool[characterChooser];
+		}
 			break;
 		case 6:
-			return 6;
+			for(var i = 0; i < pwLength; i++) {
+				var pool = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "{", "|", "}", "~"];
+				var characterChooser = Math.floor(Math.random() * pool.length);
+				pwTentative = pwTentative + pool[characterChooser];
+			}
 			break;
 		case 7:
 			return 7;
@@ -69,17 +79,28 @@ function generatePassword() {
 				pwTentative = pwTentative + pool[characterChooser];
 			}
 			break;
-		case 9:
-			return 9;
+		case 9:for(var i = 0; i < pwLength; i++) {
+			var pool = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+			var characterChooser = Math.floor(Math.random() * pool.length);
+			pwTentative = pwTentative + pool[characterChooser];
+		}
 			break;
 		case 10:
-			return 10;
+			for(var i = 0; i < pwLength; i++) {
+				var pool = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
+				var characterChooser = Math.floor(Math.random() * pool.length);
+				pwTentative = pwTentative + pool[characterChooser];
+			}
 			break;
 		case 11:
 			return 11;
 			break;
 		case 12:
-			return 12;
+			for(var i = 0; i < pwLength; i++) {
+				var pool = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
+				var characterChooser = Math.floor(Math.random() * pool.length);
+				pwTentative = pwTentative + pool[characterChooser];
+			}
 			break;
 		case 13:
 			return 13;
