@@ -32,6 +32,24 @@ function generatePassword() {
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
+
+			// Check what type each character is, if all needed types are present continue, otherwise make a new password
+			lowerTimes = 0;
+			upperTimes = 0;
+			numTimes = 0;
+			specialTimes = 0;
+			for(var i = 0; i < pwTentative.length; i++) {
+				if(lowers.includes(pwTentative[i])) {
+					lowerTimes++;
+				} else if(uppers.includes(pwTentative[i])) {
+					upperTimes++;
+				} else if(nums.includes(pwTentative[i])) {
+					numTimes++;
+				} else {
+					specialTimes++;
+				}
+				console.log(lowerTimes, upperTimes, numTimes, specialTimes);
+			}
 			break;
 		case 1:
 			var pool = [...lowers, ...uppers, ...nums];
