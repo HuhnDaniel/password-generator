@@ -34,85 +34,85 @@ function generatePassword() {
 			}
 			break;
 		case 1:
-			var pool = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+			var pool = [...lowers, ...uppers, ...nums];
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
 			break;
 		case 2:
-			var pool = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "[", "\\", "]", "^", "_", "`", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "{", "|", "}", "~"];
+			var pool = [...lowers, ...uppers, ...specials];
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
 			break;
 		case 3:
-			var pool = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+			var pool = [...lowers, ...uppers];
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
 			break;
 		case 4:
-			var pool = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "{", "|", "}", "~"];
+			var pool = [...lowers, ...nums, ...specials];
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
 			break;
 		case 5:
-			var pool = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+			var pool = [...lowers, ...nums];
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
 			break;
 		case 6:
-			var pool = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "{", "|", "}", "~"];
+			var pool = [...lowers, ...specials];
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
 			break;
 		case 7:
-			var pool = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+			var pool = [...lowers];
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
 			break;
 		case 8:
-			var pool = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":", ";", "<", "=", ">", "?", "@", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
+			var pool = [...uppers, ...nums, ...specials];
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
 			break;
 		case 9:
-			var pool = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+			var pool = [...uppers, ...nums];
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
 			break;
 		case 10:
-			var pool = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
+			var pool = [...uppers, ...specials];
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
 			break;
 		case 11:
-			var pool = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+			var pool = [...uppers];
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
 			break;
 		case 12:
-			var pool = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
+			var pool = [...nums, ...specials];
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
 			break;
 		case 13:
-			var pool = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+			var pool = [...nums];
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
 			break;
 		case 14:
-			var pool = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
+			var pool = [...specials];
 			for(var i = 0; i < pwLength; i++) {
 				pwTentative = pwTentative + pool[Math.floor(Math.random() * pool.length)];
 			}
