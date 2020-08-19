@@ -6,4 +6,4 @@
 - Displays password to page
 
 ## Author
-- Daniel Moody-Huhn https://github.com/HuhnDaniel/
+- Daniel Moody-Huhn https://huhndaniel.github.io
